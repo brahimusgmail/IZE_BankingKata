@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BankingKata.Tests/BankingKata.Tests.csproj" />
+  <Project Path="BankingKata/BankingKata.csproj" />
+</Solution>
