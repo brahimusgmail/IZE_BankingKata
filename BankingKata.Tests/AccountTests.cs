@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
+using BankingKata;
 
 namespace BankingKata.Tests
 {
@@ -31,5 +33,22 @@ namespace BankingKata.Tests
 
             Assert.Contains("50", result);
         }
+
+        [Fact]
+        public void PrintStatement_ShouldReturnCorrectFormat()
+        {
+            // Arrange
+            var account = new Account();
+            account.Deposit(1000);
+            account.Withdraw(500);
+            // Act
+            var result = account.PrintStatement();
+            // Assert
+            Assert.Contains("Date", result);
+            Assert.Contains("Amount", result);
+            Assert.Contains("Balance", result);
+        }
+
+
     }
 }
